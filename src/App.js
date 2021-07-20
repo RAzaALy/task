@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import DragItem from "./components/drag-item";
 import DropItem from "./components/drop-item";
 import { List } from "./data";
-import "./styles.css";
+import "./App.css";
 
 function App() {
   const [listValue, setValue] = useState(List);

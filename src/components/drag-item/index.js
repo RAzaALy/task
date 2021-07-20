@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "../../styles.css";
+import "../../App.css";
 import useDrag from "../../hooks/useDrag";
 import View from "./view";
 
