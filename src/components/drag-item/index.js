@@ -4,7 +4,7 @@ import useDrag from "../../hooks/useDrag";
 import View from "./view";
 
 // eslint-disable-next-line
-export default ({ dragEffect, data, key, id }) => {
+export default ({ dragEffect, data, id }) => {
   const dragRef = useRef();
   const [classValue, setClassValue] = useState("grab");
   // eslint-disable-next-line
@@ -13,7 +13,7 @@ export default ({ dragEffect, data, key, id }) => {
     effect: dragEffect,
     ref: dragRef,
     onDragStart: () => setClassValue("grabbing"),
-    onDragEnd: () =>  setClassValue("grab")
+    onDragEnd: () => setClassValue("grab"),
   });
   return <View ref={dragRef} data={data} classValue={classValue} />;
 };

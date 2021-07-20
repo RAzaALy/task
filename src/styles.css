@@ -3,21 +3,12 @@
   text-align: center;
 }
 
-.elem {
-  height: 50px;
-  width: 50px;
-  border: 1px solid magenta;
-}
-
 .grab {
   cursor: grab;
 }
 .grabbing {
   cursor: grabbing;
   border: 1px dotted;
-}
-.selectedEffect {
-  background: aqua;
 }
 
 .box {

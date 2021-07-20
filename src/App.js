@@ -5,53 +5,54 @@ import { List } from "./data";
 import "./styles.css";
 
 function App() {
-  const [todoValues, setValue] = useState(List);
+  const [listValue, setValue] = useState(List);
+
   return (
     <div className="App">
       <div className="box">
         <DropItem
           heading="LastingSales"
           onDrop={(id) => {
-            const currentTodo = { ...todoValues[id] };
-            currentTodo.state = "list";
-            setValue({ ...todoValues, ...{ [id]: currentTodo } });
+            const currentList = { ...listValue[id] };
+            currentList.state = "list";
+            setValue({ ...listValue, ...{ [id]: currentList } });
           }}
         >
-          {Object.keys(todoValues)
-            .map((key) => ({ id: key, ...todoValues[key] }))
-            .filter((todo) => todo.state === "list")
-            .map((todo) => (
-              <DragItem id={todo.id} data={todo} key={todo.id} />
+          {Object.keys(listValue)
+            .map((key) => ({ id: key, ...listValue[key] }))
+            .filter((list) => list.state === "list")
+            .map((list) => (
+              <DragItem id={list.id} data={list} key={list.id} />
             ))}
         </DropItem>
         <DropItem
           heading="Marketing"
           onDrop={(id) => {
-            const currentTodo = { ...todoValues[id] };
-            currentTodo.state = "wip";
-            setValue({ ...todoValues, ...{ [id]: currentTodo } });
+            const currentList = { ...listValue[id] };
+            currentList.state = "mark";
+            setValue({ ...listValue, ...{ [id]: currentList } });
           }}
         >
-          {Object.keys(todoValues)
-            .map((key) => ({ id: key, ...todoValues[key] }))
-            .filter((todo) => todo.state === "wip")
-            .map((todo) => (
-              <DragItem id={todo.id} data={todo} key={todo.id} />
+          {Object.keys(listValue)
+            .map((key) => ({ id: key, ...listValue[key] }))
+            .filter((list) => list.state === "mark")
+            .map((list) => (
+              <DragItem id={list.id} data={list} key={list.id} />
             ))}
         </DropItem>
         <DropItem
           heading="Business"
           onDrop={(id) => {
-            const currentTodo = { ...todoValues[id] };
-            currentTodo.state = "done";
-            setValue({ ...todoValues, ...{ [id]: currentTodo } });
+            const currentList = { ...listValue[id] };
+            currentList.state = "bus";
+            setValue({ ...listValue, ...{ [id]: currentList } });
           }}
         >
-          {Object.keys(todoValues)
-            .map((key) => ({ id: key, ...todoValues[key] }))
-            .filter((todo) => todo.state === "done")
-            .map((todo) => (
-              <DragItem id={todo.id} data={todo} key={todo.id} />
+          {Object.keys(listValue)
+            .map((key) => ({ id: key, ...listValue[key] }))
+            .filter((list) => list.state === "bus")
+            .map((list) => (
+              <DragItem id={list.id} data={list} key={list.id} />
             ))}
         </DropItem>
       </div>
