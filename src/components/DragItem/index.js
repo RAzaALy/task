@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import "../../App.css";
 import useDrag from "../../hooks/useDrag";
-import View from "./view";
+import View from "./layout";
 
 // eslint-disable-next-line
 export default ({ dragEffect, data, id }) => {

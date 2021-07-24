@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import View from "./view";
+import View from "./layout";
 
 import useDrop from "../../hooks/useDrop";
 // eslint-disable-next-line

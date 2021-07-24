@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import DragItem from "./components/drag-item";
-import DropItem from "./components/drop-item";
+import DragItem from "./components/DragItem";
+import DropItem from "./components/DropItem";
 import { List } from "./data";
 import "./App.css";
 
